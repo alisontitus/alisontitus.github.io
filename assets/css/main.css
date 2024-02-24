@@ -223,6 +223,11 @@ input, select, textarea {
 
 /* Custom */
 
+	.card-group {
+		 margin-left: -12px;
+		 margin-right: -12px;
+	}
+
 	.card {
 		background-color: rgba(0, 0, 0, 0.0) !important;
 		padding: 0px 12px 0px 12px !important;
