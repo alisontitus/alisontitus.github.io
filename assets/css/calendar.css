@@ -7,7 +7,7 @@
 .calendar-container {
     background: #fff;
 /*    background-image: linear-gradient(to right, #00ff00, #aa0000);*/
-    width: 450px;
+    width: 40%;
     border-radius: 10px;
 /*    border-style: outset;*/
 /*    border-width: 5px;*/
@@ -21,6 +21,9 @@
     justify-content: space-between;
 }
 
+.calendar-header {
+    margin: 0 0 0 0;
+}
 header .calendar-navigation {
     display: flex;
 }
@@ -78,7 +81,7 @@ header .calendar-current-date {
 
 .calendar-body .calendar-weekdays li {
     cursor: default;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 .calendar-body .calendar-dates li {
@@ -97,7 +100,7 @@ header .calendar-current-date {
 }
 
 .calendar-dates li::before {
-    border-style: outset;
+    border-style: none;
     position: absolute;
     content: "";
     z-index: -1;
@@ -105,7 +108,7 @@ header .calendar-current-date {
     left: 60%;
     width: 40px;
     height: 40px;
-    border-radius: 20%;
+    border-radius: 50%;
     transform: translate(-50%, -50%);
 }
 

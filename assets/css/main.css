@@ -1919,7 +1919,7 @@ input, select, textarea {
 
 		.box.style1 {
 			padding: 3em 2em 3.5em 2em;
-		}
+			}
 
 			.box.style1 h3 {
 				margin-bottom: 0.5em;
@@ -1993,10 +1993,13 @@ input, select, textarea {
 		text-align: center;
 	}
 
-		.wrapper.style1 {
-			background-image: none;
-			background-color: #fff;
-		}
+/* || */
+
+	.wrapper.style1 {
+		background-image: url("images/pic20.jpg");
+		background-position: 50% 80%;
+		background-color: #fafafa;
+	}
 
 		.wrapper.style2 {
 			background-color: #fafafa;
@@ -2105,7 +2108,8 @@ input, select, textarea {
 	}
 
 	#top {
-		padding: 10em 0 10em 0;
+		/* padding: 10em 0 10em 0; */
+		padding: 0 0 0 0;
 		text-align: left;
 	}
 
@@ -2208,7 +2212,7 @@ input, select, textarea {
 		/* Articles */
 
 			#top {
-				padding: 8em 0;
+				padding: 0em 0;
 			}
 
 				#top .image {
@@ -2227,7 +2231,7 @@ input, select, textarea {
 
 			#top {
 				text-align: center;
-				padding: 5em 0;
+				padding: 0 0;
 			}
 
 				#top .image {
@@ -2370,12 +2374,13 @@ input, select, textarea {
 					max-width: 32em;
 					margin-left: auto !important;
 					margin-right: auto !important;
-				}
+					}
 
 				.box.style2 {
 					max-width: 32em;
 					margin-left: auto !important;
 					margin-right: auto !important;
+					text-align: left;
 				}
 
 		/* Wrappers */
@@ -2406,7 +2411,7 @@ input, select, textarea {
 		/* Articles */
 
 			#top {
-				padding: 3em 0;
+				padding: 0em 0;
 			}
 
 				#top .image {
