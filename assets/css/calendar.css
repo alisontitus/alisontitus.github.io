@@ -12,7 +12,7 @@
 
 #calendar .nono::before {
     background-color: darkgrey;
-    border-style: solid;
+    border-style: none;
 /*    border-radius: 100%;*/
     height
 }

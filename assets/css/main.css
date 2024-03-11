@@ -226,7 +226,7 @@ input, select, textarea {
 	background-color: antiquewhite;
 	opacity: 0.8;
 	border: antiquewhite;
-	border-radius: 1em;	
+	/* border-radius: 1em;	 */
 }
 
 .intro-card strong {
@@ -1735,7 +1735,7 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background-color: #444;
+			background-color: none;
 			box-shadow: inset 0px 0px 0px 1px #242424, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.2);
 		}
 
@@ -2145,6 +2145,7 @@ input, select, textarea {
 			line-height: 1.75em;
 			color:black;
 			padding: 0.5em;
+			box-shadow: 0px 0px 22px 28px antiquewhite;
 		}
 
 			#top p a {
