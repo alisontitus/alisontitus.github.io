@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		padding-top: 3.5em;
+		/* padding-top: 3.5em; */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -221,6 +221,17 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
+
+.intro-card {
+	background-color: antiquewhite;
+	opacity: 0.8;
+	border: antiquewhite;
+	border-radius: 1em;	
+}
+
+.intro-card strong {
+	font-size: 1.2em
+}
 /* Container */
 
 	.container {
@@ -2041,13 +2052,13 @@ input, select, textarea {
 	#nav {
 		background-color: #282828;
 		text-align: center;
-		position: fixed;
+		position: relative;
 		left: 0;
 		top: 0;
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
-		height: 3.5em;
+		min-height: 3.5em;
 		line-height: 3.5em;
 	}
 
@@ -2109,7 +2120,7 @@ input, select, textarea {
 
 	#top {
 		/* padding: 10em 0 10em 0; */
-		padding: 0 0 0 0;
+		padding: 8rem 0 0 0;
 		text-align: left;
 	}
 
@@ -2118,6 +2129,7 @@ input, select, textarea {
 			width: 20em;
 			height: 20em;
 			margin: 0;
+			padding-top: 1.5em;
 		}
 
 			#top .image img {
@@ -2131,6 +2143,8 @@ input, select, textarea {
 		#top p {
 			font-size: 1.5em;
 			line-height: 1.75em;
+			color:black;
+			padding: 0.5em;
 		}
 
 			#top p a {
@@ -2247,7 +2261,7 @@ input, select, textarea {
 		/* Basic */
 
 			body {
-				padding-top: 44px;
+				/* padding-top: 44px; */
 			}
 
 			body, input, textarea, select {
@@ -2393,7 +2407,7 @@ input, select, textarea {
 		/* Nav */
 
 			#nav {
-				height: 44px;
+				/* height: 44px; */
 				line-height: 44px;
 			}
 
@@ -2421,8 +2435,11 @@ input, select, textarea {
 				}
 
 				#top p {
-					font-size: 1em;
+					font-size: 1.1em;
+					padding: 0.5em;
 				}
+
+				
 
 			#contact footer {
 				margin: 0;

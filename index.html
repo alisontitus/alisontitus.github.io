@@ -3,6 +3,13 @@
   Miniport by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+TODO:
+	Fix calendar margins
+	Add photos to Details cards
+		Make layout shift like #top
+	Fix left align issue on services cards at low width
+	File & CSS to control calendar date shading
 -->
 <html>
 	<head>
@@ -33,14 +40,21 @@
 				<!-- <img class="banner" src="images/pic20.jpg" alt="" /> -->
 				<div class="container">
 					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/pic17.jpg" alt="" /></span>
+						<div class="col-4 col-5-large col-12-medium flex-row">
+							<span class="image fit"><img class="col align-self-center" src="images/pic17.jpg" alt="" /></span>
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
 								<h1>Hi. I'm <strong>Ali</strong>.</h1>
 							</header>
-							<p>And this is <strong>Ali Rose Weddings</strong>. I've got a passion for planning, and I love <strong style="color:tomato">LOVE</strong>. I am a wedding planner and coordinator based in Salem, Oregon and I help couples with their weddings from Eugene, to Portland, all the way over to Bend! I can't wait to help you with your big day!
+							<div class="intro-card">
+								<p>
+									And this is <strong>Ali Rose Weddings</strong>. 
+									I've got a passion for planning, and I love <strong style="color:tomato">LOVE</strong>. 
+									I am a wedding planner and coordinator based in Salem, Oregon and I help couples with their weddings from Eugene, to Portland, all the way over to Bend! 
+									I can't wait to help you with your big day!
+								</p>
+							</div>
 							<a href="#services" class="button large scrolly" style="">Learn about what I do</a>
 						</div>
 					</div>
@@ -146,7 +160,7 @@
 			</article>
 
 		<!-- Calendar -->
-		<article id="calendar" class="wrapper style3">
+		<article id="calendar" class="wrapper style3 d-flex flex-column justify-content-center">
 			<header>
 				<h2>Calendar</h2>
 				<p>This is updated frequently with my availability. Weekends that I am unavailable are grayed out.</p>
@@ -176,47 +190,47 @@
 		</article>
 
 		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Let's plan a wedding.</h2>
-						<p>Please include your wedding date if you have one, and any details that will give me an idea of how to help!</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
+		<article id="contact" class="wrapper style4">
+			<div class="container medium">
+				<header>
+					<h2>Let's plan a wedding.</h2>
+					<p>Please include your wedding date if you have one, and any details that will give me an idea of how to help!</p>
+				</header>
+				<div class="row">
+					<div class="col-12">
+						<form method="post" action="#">
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<input type="text" name="name" id="name" placeholder="Name" />
 								</div>
-							</form>
-						</div>
-
-						</div>
+								<div class="col-6 col-12-small">
+									<input type="text" name="email" id="email" placeholder="Email" />
+								</div>
+								<div class="col-12">
+									<input type="text" name="subject" id="subject" placeholder="Subject" />
+								</div>
+								<div class="col-12">
+									<textarea name="message" id="message" placeholder="Message"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+										<li><input type="reset" value="Clear Form" class="alt" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
 					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+
+					</div>
 				</div>
-			</article>
+				<footer>
+					<ul id="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+			</div>
+		</article>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

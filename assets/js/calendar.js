@@ -7,6 +7,12 @@ const day=$(".calendar-dates")[0]; // selects the element with class "calendar-d
 const currdate=$(".calendar-current-date")[0]; // selects the element with class "calendar-current-date"
 const prenexIcons=document.querySelectorAll(".calendar-navigation i"); // selects all elements with class "calendar-navigation span"
 
+
+var days_off;
+let days_off_prom = fetch("/nono-days.txt")
+    .then(response => response.json())
+    .then(data => {days_off = data;})
+
 const months=[
 "January",
 "February",
@@ -21,8 +27,14 @@ const months=[
 "November",
 "December"]; // array of month names
 
+// check if a date is in the no-go date list
+var date_check = function(date2check){
+    // collect integer reps of the date
+
+}
 // function to generate the calendar
-const manipulate=()=> {
+var manipulate = async function() {
+    
     // get the first day of the month
     let dayone=new Date(year, month, 1).getDay();
 
@@ -36,8 +48,12 @@ const manipulate=()=> {
     let monthlastdate=new Date(year, month, 0).getDate();
 
     let lit=""; // variable to store the generated calendar HTML
+    // console.log("dayone = " + dayone)
 
-    console.log("dayone = " + dayone)
+    for (let i = 0; i < days_off.length; i++){
+        let day = days_off[i];
+        console.log(day);
+    }
 
     // loop to add the last dates of the previous month
     for (let i=dayone; i > 0; i--) {
@@ -48,7 +64,8 @@ const manipulate=()=> {
     for (let i=1; i <=lastdate; i++) {
         // check if the current date is today
         let isToday=i===date.getDate() && month===new Date().getMonth() && year===new Date().getFullYear() ? "active": "";
-        lit+=`<li class="${isToday}">${i}</li>`;
+        let isNono=date_check(date=i, month=month, year=year) ? "nono" : "";
+        lit+=`<li class="${isToday} ${isNono}">${i}</li>`;
     }
 
     // loop to add the first dates of the next month
@@ -63,7 +80,10 @@ const manipulate=()=> {
     day.innerHTML=lit;
 }
 
-manipulate();
+// console.log(days_off_prom);
+days_off_prom.then(() => 
+    manipulate()
+)
 
 // Attach a click event listener to each icon
 console.log(day)
