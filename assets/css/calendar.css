@@ -10,6 +10,13 @@
     align-items: center;
 }
 
+#calendar .nono::before {
+    background-color: darkgrey;
+    border-style: solid;
+/*    border-radius: 100%;*/
+    height
+}
+
 .calendar-container {
     max-width: 450px;
     width: 100%;

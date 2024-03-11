@@ -27,10 +27,29 @@ const months=[
 "November",
 "December"]; // array of month names
 
-// check if a date is in the no-go date list
-var date_check = function(date2check){
-    // collect integer reps of the date
+var zero_pad = function(number, digits = 2){
+    let num = String(number);
+    while (num.length < digits) {
+        num = "0" + num;
+    }
+    return num;
+}
 
+var textify = function(year_in, month_in, date_in){
+    console.log("textifying " + year_in + " " + month_in + " " + date_in)
+
+    return String(year_in) + "-" + zero_pad(month_in+1) + "-" + zero_pad(date_in)
+}
+
+// check if a date is in the no-go date list
+var date_check = function(yr, mo, da){
+    // collect string reps of the date
+    let date_string = textify(yr, mo, da);
+    console.log("date string " + date_string)
+
+    var present = days_off.includes(date_string)
+    console.log("Present? " + present)
+    return present;
 }
 // function to generate the calendar
 var manipulate = async function() {
@@ -63,8 +82,8 @@ var manipulate = async function() {
     // loop to add the dates of the current month
     for (let i=1; i <=lastdate; i++) {
         // check if the current date is today
-        let isToday=i===date.getDate() && month===new Date().getMonth() && year===new Date().getFullYear() ? "active": "";
-        let isNono=date_check(date=i, month=month, year=year) ? "nono" : "";
+        let isToday=i===new Date().getDate() && month===new Date().getMonth() && year===new Date().getFullYear() ? "active": "";
+        let isNono=date_check(year, month, i) ? "nono" : "";
         lit+=`<li class="${isToday} ${isNono}">${i}</li>`;
     }
 
