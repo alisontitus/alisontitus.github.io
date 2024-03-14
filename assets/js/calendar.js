@@ -36,7 +36,7 @@ var zero_pad = function(number, digits = 2){
 }
 
 var textify = function(year_in, month_in, date_in){
-    console.log("textifying " + year_in + " " + month_in + " " + date_in)
+    // console.log("textifying " + year_in + " " + month_in + " " + date_in)
 
     return String(year_in) + "-" + zero_pad(month_in+1) + "-" + zero_pad(date_in)
 }
@@ -45,10 +45,10 @@ var textify = function(year_in, month_in, date_in){
 var date_check = function(yr, mo, da){
     // collect string reps of the date
     let date_string = textify(yr, mo, da);
-    console.log("date string " + date_string)
+    // console.log("date string " + date_string)
 
     var present = days_off.includes(date_string)
-    console.log("Present? " + present)
+    // console.log("Present? " + present)
     return present;
 }
 // function to generate the calendar
@@ -71,7 +71,7 @@ var manipulate = async function() {
 
     for (let i = 0; i < days_off.length; i++){
         let day = days_off[i];
-        console.log(day);
+        // console.log(day);
     }
 
     // loop to add the last dates of the previous month
@@ -105,11 +105,6 @@ days_off_prom.then(() =>
 )
 
 // Attach a click event listener to each icon
-console.log(day)
-
-console.log(currdate)
-
-console.log(prenexIcons)
 prenexIcons.forEach(icon=> {
 
 // When an icon is clicked
