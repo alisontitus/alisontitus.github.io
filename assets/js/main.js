@@ -31,4 +31,14 @@
 			offset: function() { return $nav.height(); }
 		});
 
+		$('.style2 a, .scrolly').scrolly({
+			speed: 1000,
+			offset: function() { return $nav.height(); }
+		});
+
+		$('.box.style1 a, .scrolly').scrolly({
+			speed: 1000,
+			offset: function() { return $nav.height(); }
+		});
+
 })(jQuery);
